@@ -1,0 +1,236 @@
+:root{
+  --darkblue: rgb(31, 63, 111);
+  --grottoblue: rgb(31, 127, 175);
+  --neongreen: rgb(31, 191, 143);
+  --gold: hsl(49, 85%, 59%);
+  --ivory: rgb(223, 223, 223);
+  --gray: hsl(0, 0%, 59%);
+}
+
+body {
+  background-color: var(--darkblue);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr{
+  width: 500px;
+}
+
+#header{
+  background-color: var(--darkblue);
+  color: var(--ivory);
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-shadow: 0 0 3px black;
+}
+
+#main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#boards{
+  display: flex;
+  align-items: flex-start;
+  width: 500px;
+  background-color: var(--grottoblue);
+}
+
+#board-header{
+  display: flex;
+  width: 500px;
+  background-color: var(--grottoblue);
+  color: var(--ivory);
+}
+
+.board-title{
+  font-size: 14px;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+.left-bar, .right-bar{
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.left-bar{
+  justify-content: flex-start;
+}
+
+.right-bar{
+  justify-content: flex-end;
+}
+
+.unranked{
+  opacity: 1;
+}
+
+.ranked{
+  opacity: 1;
+}
+
+.board{
+  opacity: 1;
+}
+
+.team-name{
+  display: inline-block;
+  width: 48px;
+  height: 21px;
+  margin: 0px;
+  padding: 0px;
+  border: black solid 1px;
+}
+
+.team-record-TT{
+  display: inline-block;
+  width: 50px;
+  height: 23px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.team-sos{
+  display: inline-block;
+  width: 50px;
+  height: 23px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.team-rank-box{
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  margin: 0px 2px;
+  padding: 0px;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  background-color: var(--ivory);
+}
+
+.team-rank-button{
+  margin-right: 30px;
+}
+
+.team-unrank-button{
+  margin: 0px;
+}
+
+.team-rank-button, .team-unrank-button{
+  width: 30px;
+  height: 23px;
+  padding: 0px;
+
+  border: black solid 3px;
+  border-radius: 2px;
+  color: black;
+  background-color: var(--neongreen);
+  text-align: center;
+}
+
+.team-rank-button:hover, .team-unrank-button:hover, #submit-button:hover{
+  color: var(--neongreen);
+  background-color: black;
+}
+
+.team-rank-button:enabled:active, .team-unrank-button:enabled:active #submit-button:enabled:active{
+  color: var(--neongreen);
+  background-color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.team-rank-button:disabled, .team-unrank-button:disabled{
+  color: gray;
+  background-image: linear-gradient(to bottom right, var(--neongreen), var(--gray) ) ;
+}
+
+.team-rank-num{
+  color: white;
+  display: inline-block;
+  width: 30px;
+  height: 21px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.team-reorder-button{
+  width: 23px;
+  height: 23px;
+  margin: 0px 2px;
+  padding: 0px;
+
+  font-weight: 800;
+  border: black solid 3px;
+  border-radius: 2px;
+  color: black;
+  background-color: var(--gold);
+  text-align: center;
+}
+
+.team-reorder-button:hover{
+  color: var(--gold);
+  background-color: black;
+}
+
+.team-reorder-button:enabled:active{
+  color: black;
+  background-color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.team-reorder-button:disabled{
+  color: gray;
+  background-image: linear-gradient(to bottom right, var(--gold), var(--gray) ) ;
+}
+
+.empty{
+  background-color: black;
+  color: white;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+.upside-down{
+  text-transform: rotate(180deg);
+}
+
+#submit-button{
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  font-size: 30px;
+  font-weight: 700;
+
+  border: black solid 3px;
+  border-radius: 2px;
+  color: black;
+  background-color: var(--neongreen);
+  text-align: center;
+}
+
+#submit-text-area{
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+  resize: none;
+}
+
